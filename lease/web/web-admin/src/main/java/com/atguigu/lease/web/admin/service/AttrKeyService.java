@@ -12,5 +12,8 @@ import java.util.List;
 * @createDate 2023-07-24 15:48:00
 */
 public interface AttrKeyService extends IService<AttrKey> {
-
+    /**
+     * 查询所所有的属性名和属性值列表
+     */
+    List<AttrKeyVo> listAttrInfo();
 }
