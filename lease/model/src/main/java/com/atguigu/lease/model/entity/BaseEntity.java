@@ -1,8 +1,7 @@
 package com.atguigu.lease.model.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -17,14 +16,18 @@ public class BaseEntity implements Serializable {
     private Long id;
 
     @Schema(description = "创建时间")
-    @TableField(value = "create_time")
+    @JsonIgnore  //响应浏览器时忽略字段
+    @TableField(value = "create_time",fill = FieldFill.INSERT)
     private Date createTime;
 
     @Schema(description = "更新时间")
-    @TableField(value = "update_time")
+    @JsonIgnore  //响应浏览器时忽略字段
+    @TableField(value = "update_time",fill = FieldFill.UPDATE)
     private Date updateTime;
 
     @Schema(description = "逻辑删除")
+    @JsonIgnore  //响应浏览器时忽略字段
+    @TableLogic  //逻辑删除的注解
     @TableField("is_deleted")
     private Byte isDeleted;
 
