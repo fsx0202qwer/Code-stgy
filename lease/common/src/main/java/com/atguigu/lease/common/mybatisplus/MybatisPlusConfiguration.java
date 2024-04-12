@@ -1,6 +1,7 @@
 package com.atguigu.lease.common.mybatisplus;
 
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -9,10 +10,10 @@ import org.springframework.context.annotation.Configuration;
  * Description:
  *
  * @Author fsx
- * @Create 2024/4/11 20:35
+ * @Create 2024/4/12 9:06
  * @Version 1.0
  */
-@Configuration
+@SpringBootConfiguration
 @MapperScan("com.atguigu.lease.web.*.mapper")
 public class MybatisPlusConfiguration {
 

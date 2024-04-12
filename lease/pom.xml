@@ -14,6 +14,12 @@
         <module>model</module>
         <module>web</module>
     </modules>
+    <!-- 继承Spring Boot父项目 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.5</version>
+    </parent>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -30,12 +36,7 @@
         <knife4j.version>4.1.0</knife4j.version>
         <aliyun.sms.version>2.0.23</aliyun.sms.version>
     </properties>
-    <!-- 继承Spring Boot父项目 -->
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.5</version>
-    </parent>
+
 
 
     <!--配置dependencyManagement统一管理依赖版本-->
