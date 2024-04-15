@@ -1,7 +1,17 @@
 package com.atguigu.lease.web.admin.service;
 
+import io.minio.errors.*;
 import org.springframework.web.multipart.MultipartFile;
 
-public interface FileService {
+import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 
+public interface FileService {
+    /**
+     * 文件上传
+     * @param file
+     * @return
+     */
+    String upload(MultipartFile file) throws ServerException, InsufficientDataException, ErrorResponseException, IOException, NoSuchAlgorithmException, InvalidKeyException, InvalidResponseException, XmlParserException, InternalException;
 }
