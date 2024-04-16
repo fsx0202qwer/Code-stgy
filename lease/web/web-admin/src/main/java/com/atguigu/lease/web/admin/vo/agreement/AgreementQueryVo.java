@@ -1,12 +1,12 @@
 package com.atguigu.lease.web.admin.vo.agreement;
 
+import com.atguigu.lease.web.admin.vo.apartment.ApartmentQueryVo;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 @Data
 @Schema(description = "租约查询实体")
 public class AgreementQueryVo {
-
     @Schema(description = "公寓所处省份id")
     private Long provinceId;
 

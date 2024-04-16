@@ -32,3 +32,5 @@ minio:
   access-key: minioadmin  # 账号
   secret-key: minioadmin  # 密码
   bucket-name: stgy       # 文件服务器中桶的名称
+springdoc:
+  default-flat-param-object: true
