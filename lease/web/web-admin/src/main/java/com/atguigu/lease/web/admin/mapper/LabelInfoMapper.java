@@ -13,7 +13,12 @@ import java.util.List;
 * @Entity com.atguigu.lease.model.LabelInfo
 */
 public interface LabelInfoMapper extends BaseMapper<LabelInfo> {
-
+    /**
+     * 查询标签列表
+     * @param id
+     * @return
+     */
+    List<LabelInfo> selectListByApartmentId(Long id);
 }
 
 

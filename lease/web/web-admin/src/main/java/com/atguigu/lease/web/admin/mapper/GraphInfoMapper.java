@@ -14,7 +14,13 @@ import java.util.List;
 * @Entity com.atguigu.lease.model.GraphInfo
 */
 public interface GraphInfoMapper extends BaseMapper<GraphInfo> {
-
+    /**
+     * 查询图片列表
+     * @param itemType
+     * @param itemId
+     * @return
+     */
+    List<GraphVo> selectListByItemTypeAndId(ItemType itemType, Long itemId);
 }
 
 

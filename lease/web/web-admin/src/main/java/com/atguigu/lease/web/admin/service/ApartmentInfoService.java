@@ -27,4 +27,17 @@ public interface ApartmentInfoService extends IService<ApartmentInfo> {
      * @param queryVo
      */
     IPage<ApartmentItemVo> pageApartmentItemByQuery(IPage<ApartmentItemVo> page, ApartmentQueryVo queryVo);
+
+    /**
+     * 根据id获取公寓详细信息
+     * @param id
+     * @return
+     */
+    ApartmentDetailVo getApartmentDetailById(Long id);
+
+    /**
+     * 根据id删除公寓信息
+     * @param id
+     */
+    void removeApartmentById(Long id);
 }

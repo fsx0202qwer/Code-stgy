@@ -12,7 +12,12 @@ import java.util.List;
 * @Entity com.atguigu.lease.model.FacilityInfo
 */
 public interface FacilityInfoMapper extends BaseMapper<FacilityInfo> {
-
+    /**
+     * 查询配套列表
+     * @param id
+     * @return
+     */
+    List<FacilityInfo> selectListByApartmentId(Long id);
 }
 
 

@@ -20,4 +20,19 @@
         on k.id=v.fee_key_id
         where k.is_deleted=0 and v.is_deleted=0
     </select>
+    <select id="selectListByApartmentId" resultType="com.atguigu.lease.web.admin.vo.fee.FeeValueVo">
+        SELECT fv.id,
+               fv.name,
+               fv.unit,
+               fv.fee_key_id,
+               fk.name AS fee_key_name
+        FROM fee_value fv
+                 JOIN fee_key fk ON fv.fee_key_id = fk.id
+        WHERE fv.is_deleted = 0
+          AND fk.is_deleted = 0
+          and fv.id in (select fee_value_id
+                        from apartment_fee_value
+                        where is_deleted = 0
+                          and apartment_id = #{id})
+    </select>
 </mapper>

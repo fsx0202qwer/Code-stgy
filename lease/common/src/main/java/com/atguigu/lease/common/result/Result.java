@@ -19,7 +19,12 @@ public class Result<T> {
 
     public Result() {
     }
-
+    public static <T> Result<T> fail(Integer code, String message) {
+        Result<T> result = build(null);
+        result.setCode(code);
+        result.setMessage(message);
+        return result;
+    }
     private static <T> Result<T> build(T data) {
         Result<T> result = new Result<>();
         if (data != null)

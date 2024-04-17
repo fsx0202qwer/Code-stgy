@@ -2,6 +2,7 @@ package com.atguigu.lease.web.admin.mapper;
 
 import com.atguigu.lease.model.entity.FeeKey;
 import com.atguigu.lease.web.admin.vo.fee.FeeKeyVo;
+import com.atguigu.lease.web.admin.vo.fee.FeeValueVo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
@@ -15,6 +16,13 @@ import java.util.List;
 public interface FeeKeyMapper extends BaseMapper<FeeKey> {
 
     List<FeeKeyVo> listFeeInfo();
+
+    /**
+     * 查询杂费信息列表
+     * @param id
+     * @return
+     */
+    List<FeeValueVo> selectListByApartmentId(Long id);
 }
 
 
