@@ -19,7 +19,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 @Configuration
 public class WebMvcConfiguration implements WebMvcConfigurer {
-
     @Autowired
     private StringToBaseEnumConverterFactory stringToBaseEnumConverterFactory;
 
