@@ -12,5 +12,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2023-07-24 15:48:00
 */
 public interface ViewAppointmentService extends IService<ViewAppointment> {
-
+    /**
+     * 分页查询预约信息
+     * @param page
+     * @param queryVo
+     * @return
+     */
+    IPage<AppointmentVo> pageAppointmentByQuery(IPage<AppointmentVo> page, AppointmentQueryVo queryVo);
 }

@@ -1,6 +1,7 @@
 package com.atguigu.lease.model.entity;
 
 import com.atguigu.lease.model.enums.AppointmentStatus;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;

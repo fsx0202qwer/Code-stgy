@@ -13,7 +13,13 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 * @Entity com.atguigu.lease.model.ViewAppointment
 */
 public interface ViewAppointmentMapper extends BaseMapper<ViewAppointment> {
-
+    /**
+     * 根据条件分页查询预约信息
+     * @param page
+     * @param queryVo
+     * @return
+     */
+    IPage<AppointmentVo> pageAppointmentByQuery(IPage<AppointmentVo> page, AppointmentQueryVo queryVo);
 }
 
 
