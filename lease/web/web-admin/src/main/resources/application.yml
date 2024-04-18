@@ -30,6 +30,7 @@ mybatis-plus:
       logic-delete-field: is_deleted # 全局逻辑删除的实体字段名(配置后可以忽略不配置步骤二)
       logic-delete-value: 1 # 逻辑已删除值(默认为 1)
       logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+      update-strategy: not_null
 minio:
   endpoint: http://192.168.142.162:9000 #文件服务器的ip 以及端口号
   access-key: minioadmin  # 账号
