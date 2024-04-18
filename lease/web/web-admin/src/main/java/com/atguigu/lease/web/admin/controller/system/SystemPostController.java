@@ -66,5 +66,6 @@ public class SystemPostController {
         lambdaUpdateWrapper.set(SystemPost::getStatus,status);
         systemPostService.update(lambdaUpdateWrapper);
         return Result.ok();
+
     }
 }
