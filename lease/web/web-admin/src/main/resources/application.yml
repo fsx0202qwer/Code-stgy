@@ -21,6 +21,11 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+  data:
+    redis:
+      host: 192.168.142.162
+      port: 6379
+      database: 0
 #用于打印框架生成的sql语句，便于调试
 mybatis-plus:
   configuration:
@@ -38,3 +43,8 @@ minio:
   bucket-name: stgy       # 文件服务器中桶的名称
 springdoc:
   default-flat-param-object: true
+admin:
+  auth:
+    path-patterns:
+      include: /admin/**
+      exclude: /admin/login/**
